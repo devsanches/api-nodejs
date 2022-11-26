@@ -1,0 +1,30 @@
+version: '3'
+services:
+    dbpostgres:       
+        image: postgres
+        container_name: dbpostgres
+        environment:
+            POSTGRES_PASSWORD: "123456"
+        ports: 
+            - "5432:5432"
+        volumes:
+            - C:\projetos\spring\PostgreSQL\data:/var/lib/postgresql/data        
+        networks: 
+            - postgresql-network
+
+    pgadmin-postgres:
+        image: dpage/pgadmin4
+        container_name:  pgadmin_postgres
+        environment:
+            PGADMIN_DEFAULT_EMAIL: "chan.sanches@gmail.com"
+            PGADMIN_DEFAULT_PASSWORD: "123456"
+        ports:
+            - "8888:80"
+        depends_on:
+            - dbpostgres
+        networks:
+            - postgresql-network
+
+networks:
+    postgresql-network:
+        driver: bridge

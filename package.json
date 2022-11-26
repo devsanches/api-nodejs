@@ -1,0 +1,32 @@
+{
+  "name": "api-nodejs",
+  "version": "1.0.0",
+  "description": "\"# api-nodejs\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env node",
+    "start": "nodemon ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsanches/api-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsanches/api-nodejs/issues"
+  },
+  "homepage": "https://github.com/devsanches/api-nodejs#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "body-parser": "^1.20.1",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "jest": "^29.3.1",
+    "pg-promise": "^10.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
